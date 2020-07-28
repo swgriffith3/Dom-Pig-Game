@@ -9,12 +9,25 @@ GAME RULES:
 
 */
 
-// Starter variables **********
+// Starter variables
 let scores = [0, 0];
 let roundScore = 0;
-let activePlayer = 0;
+let activePlayer = 1;
 
-// Random number 1-6 **********
-let dice = Math.floor(Math.random() * 6) + 1;
+// Hide dice for first turn
+document.querySelector('.dice').style.display = 'none';
 
-document.querySelector('#current-' + activePlayer).textContent = dice;
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+
+document.querySelector('.btn-roll').addEventListener('click', function () {
+  // Random number 1-6
+  let dice = Math.floor(Math.random() * 6) + 1;
+
+  //   Display the result
+  let diceDOM = document.querySelector('.dice');
+  diceDOM.style.display = 'block';
+  diceDOM.src = 'dice-' + dice + '.png';
+});
