@@ -1,2 +1,2 @@
-# Dom-Pig-Game
+Dom-Pig-Game
 Udemy JS course module.
